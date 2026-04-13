@@ -74,6 +74,7 @@ body {
 .intro-container {
     display: flex;
     align-items: flex-start;
+    align-items: center;
     gap: 40px;
     margin-bottom: 40px;
 }
@@ -106,7 +107,7 @@ h1 {
 h2 {
     font-size: 2rem;
     color: var(--text-dark);
-    margin: 20px 0;
+    margin: 10px 0;
     line-height: 1.2;
 }
 
@@ -115,12 +116,13 @@ h2 {
     height: auto;
     border-radius: 10px;
     display: block;
+    margin: auto;
 }
 
 .lead {
     font-size: 20px;
     color: #3c3c3c;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-align: justify;
 }
 
@@ -135,10 +137,21 @@ h2 {
     margin-bottom: 20px;
 }
 
+.taps-row{
+    display: flex;
+    
+}
+
 .feature-item h3 {
     margin: 0;
     color: var(--primary-blue);
-    font-size: 1.2rem;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#sanitaires, #thermiques {
+    display: flex;
+    align-items: flex-start;
 }
 
 .image-placeholder img {
@@ -161,4 +174,76 @@ h2 {
 .btn-primary:hover {
     background-color: #003d7a;
     transform: translateY(-2px);
+}
+
+/* --- RESPONSIVE DESIGN FOR SMALLER SCREENS (Updates) --- */
+@media (max-width: 900px) {
+
+    /* 1. Stack "Qui sommes-nous" (Text on top, Facade image on bottom) - UNCHANGED */
+    .intro-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .intro-image {
+        width: 100%;
+    }
+
+    /* 2. Stack "Thermiques" and CENTER the Radiator */
+    #thermiques {
+        flex-direction: column; /* Keep overall stack: text top, image bottom */
+        align-items: center;    /* --- NEW LINE: Centers everything, including the radiator --- */
+    }
+
+    /* 3. Stack "Sanitaires" (Text on top, Taps on bottom) - MODIFIED */
+    #sanitaires {
+        flex-direction: column-reverse; /* Text block to top, image container to bottom */
+        align-items: center;           /* --- NEW LINE: Centers the entire text/image group --- */
+    }
+
+    /* 4. Ensure images don't break out of the screen - UNCHANGED */
+    .feature-image {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    /* --- ALL NEW CSS RULES BELOW --- */
+
+    /* 5. Center the radiator image itself within #thermiques */
+    #thermiques {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: left;
+    }
+    
+    #thermiques .feature-image {
+        display: block;
+        margin: 20px auto 0; /* Forces it to center */
+        max-width: 80%; /* Keeps it from getting too huge */
+        height: auto;
+    }
+
+    /* 2. Stack the Sanitaires text on top, images on bottom */
+    #sanitaires {
+        flex-direction: column-reverse; 
+        align-items: center;
+    }
+
+    /* 3. Force the taps to ALWAYS sit next to each other */
+    .taps-row {
+        display: flex;
+        flex-direction: row !important; /* Strict horizontal layout */
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Space between the two taps */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Make sure the taps shrink to fit the row */
+    .taps-row .feature-image {
+        width: 45%; /* Limits width so both fit on one line */
+        max-width: 200px;
+        height: auto !important;
+        margin: 0; /* Removes any leftover margins from HTML */
+    }
 }
