@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -10,8 +10,8 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="gestproimg.png" alt="Logo de GEST Pro" class="logo" width="80" height="80" style="margin-top:5px; margin-bottom:5px ;">
-                <img src="gestprotext.png" alt="Logo de GEST Pro" class="logo" width="200" height="35" style="margin-top:5px; margin-bottom:5px; border-radius:5px;">
+                <img src="../pics/gestproimg.png" alt="Logo de GEST Pro" class="logo" width="80" height="80" style="margin-top:5px; margin-bottom:5px ;">
+                <img src="../pics/gestprotext.png" alt="Logo de GEST Pro" class="logo" width="200" height="35" style="margin-top:5px; margin-bottom:5px; border-radius:5px;">
             </div>
             <ul class="nav-links">
                 <li><a href="landing.html" target="_self">Accueil</a></li>
@@ -36,17 +36,21 @@
                             </div>
 
                             <div class="intro-image">
-                                <img src="facadeJour.png" alt="Façade de GEST Pro" class="facade-image">
+                                <img src="../pics/facadeJour.png" alt="Façade de GEST Pro" class="facade-image">
                             </div>
                         </div>
                     </div>
                 
                     <h2>Nos domaines d'expertise</h2>
                     <div class="features">
-                        <div class="feature-item">
+                        <div class="feature-item" id="sanitaires">
+                            <div class="taps-row">
+        <img src="../pics/sopal3.png" alt="Solutions Sanitaires" class="feature-image" width="200">
+        <img src="../pics/sopal2.png" alt="Solutions Sanitaires" class="feature-image" width="200">
+    </div> 
                             <i class="icon-drop"></i>
                             <div>
-                                <h3>Solutions Sanitaires</h3>
+                                <h3><i>Solutions Sanitaires</i></h3>
                                 <p>Nous transformons vos espaces d'eau en lieux de confort et de design. Notre catalogue regroupe une sélection rigoureuse de:<br>
                                 <i><b>
                                     <ul>
@@ -58,25 +62,37 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <i class="icon-fire"></i>
-                            <div>
-                                <h3>Solutions Thermiques et Energétiques</h3>
-                                <p>Parce que le confort thermique est essentiel, nous proposons des systèmes de pointe pour la maîtrise du climat intérieur:<br>
-                                <i><b>
-                                    <ul>
-                                        <li>Chauffage central et chaudières à haute performance.</li>
-                                        <li>Radiateurs design et planchers chauffants.</li>
-                                        <li>Solutions de climatisation et de gestion d'eau chaude sanitaire.</li>
-                                    </ul>
-                                </b></i>
-                                </p>
-                            </div>
-                        </div>
+                        <div class="feature-item" id="thermiques">
+    <i class="icon-fire"></i>
+    
+    <div>
+        <h3><i>Solutions Thermiques et Energétiques</i></h3>
+        <p>Parce que le confort thermique est essentiel, nous proposons des systèmes de pointe pour la maîtrise du climat intérieur:<br>
+        <i><b>
+            <ul>
+                <li>Chauffage central et chaudières à haute performance.</li>
+                <li>Radiateurs design et planchers chauffants.</li>
+                <li>Solutions de climatisation et de gestion d'eau chaude sanitaire.</li>
+            </ul>
+        </b></i>
+        </p>
+    </div>
+
+    <img src="../pics/radiateurDietrich.png" alt="Radiateur" class="feature-image" width="400" height="200">
+    
+</div>
                     </div>
                 </div>
             </div>
         </div>
+        <section class="map-section">
+    <div class="container">
+        <h2>Notre Emplacement</h2>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Gest+Pro+Global+%C3%89quipement,+Sousse,+Tunisia&hl=fr&z=16&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
     </section>
 </body>
 </html>
