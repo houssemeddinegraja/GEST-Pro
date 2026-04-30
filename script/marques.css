@@ -47,3 +47,22 @@ body {
     background-color: #ce0000;
     border-radius: 15px;
 }
+
+
+
+#plomberie-title {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #003162;
+    border-radius: 40px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 24px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#003d7b;
+
+}
+
