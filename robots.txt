@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://houssemdedinegraja.github.io/GEST-Pro/sitemap.xml
