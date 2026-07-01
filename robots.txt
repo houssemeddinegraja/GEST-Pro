@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gest-pro-17.github.io/GEST-Pro/sitemap.xml
