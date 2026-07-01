@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Découvrez GEST Pro Sousse en images: aperçu de nos solutions sanitaires et thermiques professionelles.">
+    <title>GEST Pro en images - un Sneak Peek</title>
+    <link rel="shortcut icon" href="pics/gestproimg.png"> <link rel="icon" type="image/png" sizes="32x32" href="pics/gestproimg.png"> 
+   
+    <link rel='stylesheet' href='index.css'>
+    <link rel='stylesheet' href='galerie.css'>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="pics/gestproimg.png" alt="Logo" class="logo-icon" width="80" height="80">
+                <img src="pics/gestprotext.png" alt="GEST Pro" class="logo-text" width="200" height="35">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="marques.html">Marques</a></li>
+                <li><a href="partenaires.html">Partenaires</a></li>
+                <li><a href="galerie.html" class="active">Galerie</a></li>
+                <li><a href="infos.html">Plus d'infos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="galerie-page">
+        <section class="galerie-intro">
+            <div class="container">
+                <span class="badge">Notre Espace</span>
+                <h1 class="section-title">Découvrez GEST Pro en Images</h1>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <button class="carousel-arrow prev-arrow" id="prevBtn">&#10094;</button>
+                <button class="carousel-arrow next-arrow" id="nextBtn">&#10095;</button>
+
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img src="pics/photo1.jpg" alt="Photo 1"></div>
+                    <div class="carousel-slide"><img src="pics/photo2.jpg" alt="Photo 2"></div>
+                    <div class="carousel-slide"><img src="pics/photo3.jpg" alt="Photo 3"></div>
+                    <div class="carousel-slide"><img src="pics/photo4.jpg" alt="Photo 4"></div>
+                    <div class="carousel-slide"><img src="pics/photo5.jpg" alt="Photo 5"></div>
+                    <div class="carousel-slide"><img src="pics/photo6.jpg" alt="Photo 6"></div>
+                    <div class="carousel-slide"><img src="pics/photo7.jpg" alt="Photo 7"></div>
+                    <div class="carousel-slide"><img src="pics/photo8.jpg" alt="Photo 8"></div>
+                    <div class="carousel-slide"><img src="pics/photo9.jpg" alt="Photo 9"></div>
+                    <div class="carousel-slide"><img src="pics/photo10.jpg" alt="Photo 10"></div>
+                    <div class="carousel-slide"><img src="pics/photo11.jpg" alt="Photo 11"></div>
+                    <div class="carousel-slide"><img src="pics/photo12.jpg" alt="Photo 12"></div>
+                    <div class="carousel-slide"><img src="pics/photo13.jpg" alt="Photo 13"></div>
+                    <div class="carousel-slide"><img src="pics/photo14.jpg" alt="Photo 14"></div>
+                    <div class="carousel-slide"><img src="pics/photo15.jpg" alt="Photo 15"></div>
+                    <div class="carousel-slide"><img src="pics/photo16.jpg" alt="Photo 16"></div>
+                    <div class="carousel-slide"><img src="pics/photo17.jpg" alt="Photo 17"></div>
+                    <div class="carousel-slide"><img src="pics/photo18.jpg" alt="Photo 18"></div>
+                    <div class="carousel-slide"><img src="pics/photo19.jpg" alt="Photo 19"></div>
+                    <div class="carousel-slide"><img src="pics/photo20.jpg" alt="Photo 20"></div>
+                    <div class="carousel-slide"><img src="pics/photo21.jpg" alt="Photo 21"></div>
+                    <div class="carousel-slide"><img src="pics/photo22.jpg" alt="Photo 22"></div>
+                    <div class="carousel-slide"><img src="pics/photo23.jpg" alt="Photo 23"></div>
+                    <div class="carousel-slide"><img src="pics/photo24.jpg" alt="Photo 24"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const track   = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Scroll exactly one slide (= the track's visible width) at a time
+        // scroll-snap-type in CSS ensures it always lands perfectly centered
+        nextBtn.addEventListener('click', () => track.scrollBy({ left:  track.offsetWidth, behavior: 'smooth' }));
+        prevBtn.addEventListener('click', () => track.scrollBy({ left: -track.offsetWidth, behavior: 'smooth' }));
+    </script>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 GEST Pro. Tous droits réservés.</p>
+            <p>Besoin d'un plan d'accès exact ? Consultez notre page <a href="infos.html">Plus d'infos</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
