@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.galerie-page { flex: 1; } /* pushes footer to the bottom */
+
+.galerie-intro { padding: 60px 20px; text-align: center; }
+
+.badge { 
+    background: #b3d1ef4e; color: #ce0000; padding: 6px 16px; 
+    border-radius: 20px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; 
+}
+
+.section-title { color: #003162; margin-top: 15px; font-size: 2.2rem; }
+
+/* GALERIE HORIZONTALE */
+.carousel-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 60px; /* room for the arrows on each side */
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+/* Scrollable track — one full-width slide visible at a time */
+.carousel-track {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* locks scroll to exact slide boundaries */
+    padding: 10px 4px 20px;
+}
+
+/* Each slide takes the full track width and snaps to center */
+.carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-width: 750px;
+    height: 750px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    display: block;
+    transition: box-shadow 0.2s ease;
+}
+
+.carousel-slide img:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+/* FLECHES */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: #003162;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+.carousel-arrow:hover { background: #ce0000; }
+.prev-arrow { left: 6px; }
+.next-arrow { right: 6px; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .carousel-section { padding: 0 44px; }
+    .carousel-slide img { height: 260px; }
+    .carousel-arrow { width: 34px; height: 34px; font-size: 0.95rem; }
+}
+/* --- FOOTER --- */
+.main-footer {
+    background-color: var(--dark-blue);
+    color: #94a3b8;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 3px solid var(--accent-red);
+}
+
+.main-footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+/* --- ADAPTATION MOBILE (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Menu de navigation responsive */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+
+    /* Intro de la galerie */
+    .galerie-intro {
+        padding: 30px 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* Section Carrousel */
+    .carousel-section {
+        padding: 0 45px; /* Réduction de l'espace sur les côtés pour laisser place à l'image */
+        margin: 20px auto;
+    }
+
+    .carousel-slide img {
+        max-width: 100%;
+        height: auto; /* Supprime les 750px fixes */
+        max-height: 380px; /* Donne une hauteur idéale sur mobile */
+        border-radius: 8px;
+    }
+
+    /* Flèches du carrousel */
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    #prevBtn { left: 5px; }
+    #nextBtn { right: 5px; }
+}
